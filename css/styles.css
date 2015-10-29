@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Butterfly+Kids);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+body{
+  background: url('../img/background.jpg');
+  background-size: cover;
+  min-height: 500px;
+}
+
+header{
+  text-align: center;
+  color: #FF69B4;
+  border-bottom: solid 1px black;
+  padding-bottom: .5em;
+}
+
+header>h1{
+  text-shadow: 2px 2px #333;
+  padding-top: 10px;
+  margin: .25em;
+}
+
+h1{
+  font-family: 'Butterfly Kids', cursive;
+  font-size: 4rem;
+}
+
+.navigation>ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation ul li{
+  display: inline;
+  width: 60px;
+  margin: 0 60px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navigation ul>li:first-child{
+  margin-left: 0;
+}
+
+.navigation ul>li:last-child{
+  margin-right: 0;
+}
+
+.navigation ul li a{
+  text-decoration: none;
+  color: #FF69B4;
+}
+
+.container{
+  width: 900px;
+  background: rgba(255, 255, 255, 0.75);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#content{
+  height: 500px;
+}
