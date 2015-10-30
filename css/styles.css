@@ -10,19 +10,25 @@ body{
 header{
   text-align: center;
   color: #FF69B4;
-  border-bottom: solid 1px black;
   padding-bottom: .5em;
 }
 
 header>h1{
-  text-shadow: 2px 2px #333;
+  text-shadow: 1px 1px #333;
   padding-top: 10px;
   margin: .25em;
 }
 
 h1{
   font-family: 'Butterfly Kids', cursive;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+h3{
+  font-family: 'Indie Flower', cursive;
+  color:
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .navigation>ul{
@@ -52,6 +58,11 @@ h1{
 .navigation ul li a{
   text-decoration: none;
   color: #FF69B4;
+  text-shadow: 1px 1px #333;
+}
+
+.navigation ul li a:hover{
+  color: #b4ff69;
 }
 
 .container{
@@ -63,4 +74,59 @@ h1{
 
 #content{
   height: 500px;
+}
+
+.home{
+  text-align: center;
+}
+
+.home>h1{
+  font-family: 'Indie Flower', cursive;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #b4ff69;
+  text-shadow: 2px 2px #333;
+  font-size: 4.25rem;
+}
+
+.selectgame{
+  width: 300px;
+  height: 150px;
+  background-color: #FF69B4;
+  float: left;
+  margin-left: 11%;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 5px #888888;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
+  color: white;
+}
+
+.selectgame:nth-child(even){
+  margin-right: 11%;
+  float: right;
+  clear:both;
+}
+
+.selectgame:hover{
+  box-shadow: none;
+  color: #b4ff69;
+}
+
+#colorbox p,
+#matchingbox p,
+#countingbox p{
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+#whackamolebox{
+  line-height: .85em;
+  font-size: 3em;
+}
+
+#whackamolebox p{
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
