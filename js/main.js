@@ -20,11 +20,26 @@ $('#content a').on('click', function(e){
 
 /*--------Color game-----------*/
 
-var colors = ["red", "blue", "yellow", "green", "purple", "orange"];
-var newcolor = colors[Math.floor(Math.random() * colors.length)];
 
 $(document).ready(function(){
-  $('body').on('click','#button',function(){
-      $('#colorinstructions').html("Let's Begin!");
+
+  var colors = ["red", "blue", "yellow", "green", "purple", "orange"];
+
+  $('body').on('click','#button, #coloragain', function(){
+
+    var newcolor = colors[Math.floor(Math.random() * colors.length)];
+
+    $('#content>h2').fadeOut(200).remove();
+    $('#colorinstructions').html("<h2>What color is " + newcolor + "?</h2>");
+    console.log(newcolor);
+
+    $('body').on('click', '.colorbox', function (){
+      console.log(newcolor);
+      if(this.id == newcolor){
+        $('#colorinstructions').html("<h2>Great job! Would you like to play again?").append("<button type='button' id='coloragain' class='btn'>Yes!</button>");
+      } else{
+        $('#colorinstructions').html("<h2>Nope...keep trying!</h2>")
+      };
+    });
   });
 });
