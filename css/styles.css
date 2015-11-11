@@ -209,12 +209,15 @@ h3{
 .purple{background-color: purple}
 .orange{background-color: orange}
 
-/*---------Color Game----------*/
+/*---------Whackamole Game----------*/
 
 .molebox{
   width: 200px;
   height: 150px;
-  background-color: grey;
+  background: url('../img/molehill.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   float: left;
   margin-left: 30px;
   margin-right: 30px;
@@ -237,4 +240,10 @@ h3{
 
 .molebox:hover{
   box-shadow: none;
+}
+
+.peep{
+  background: url('../img/mole.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
