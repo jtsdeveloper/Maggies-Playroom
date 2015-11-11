@@ -83,16 +83,6 @@ $(document).ready(function(){
   });
 
   /*--------Whack-a-mole game-----------*/
-  /*
-  var $1 = $('#1'),
-      $2 = $('#2'),
-      $3 = $('#3'),
-      $4 = $('#4'),
-      $5 = $('#5'),
-      $6 = $('#6');
-
-  var $molehole = [$1, $2, $3, $4, $5, $6];
-  */
 
   var moleholes = ["#1", "#2", "#3", "#4", "#5", "#6"];
 
@@ -109,6 +99,7 @@ $(document).ready(function(){
         document.getElementById("whackamoleinstructions").innerHTML = "<h2>Time: " + counter + "</h2>";
       } else{
         clearInterval(gameTime);
+        $(".molecontainer>div.peep").removeClass("peep");
         document.getElementById("whackamoleinstructions").innerHTML ="<h2>Score: XX<span style='padding-left: 3em'></span>Play again?"
         + "<span style='padding-left:1em'></span><button type='button' id='whackamoleagain' class='btn'>Yes</button>"
         + "<button type='button' id='whackamoleagainno' class='btn'>No</button>"
@@ -118,18 +109,20 @@ $(document).ready(function(){
 
     var molePop = setInterval(molePeep, 2250);
     function molePeep() {
-      /*var $moleindex = $molehole[Math.floor(Math.random() * $molehole.length)];
-      console.log($moleindex);
-      $('moleindex').html("<h2>MOLE</h2>");*/
+      $(".molecontainer>div.peep").removeClass("peep");
 
       moleindex = moleholes[Math.floor(Math.random() * moleholes.length)];
       console.log(moleindex);
 
-      $(moleindex).html("MOLE");
+      $('.molebox').empty();
+      $(moleindex).toggleClass('peep');
 
       if (counter <= 1) {
+        $('.molebox').empty();
         clearInterval(molePop);
       };
     };
   });
+
+
 });
