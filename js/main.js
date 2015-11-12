@@ -32,7 +32,7 @@ $(document).ready(function(){
 
   var colors = ["red", "blue", "yellow", "green", "purple", "orange"];
 
-  $('body').on('click','#button, #coloragain', function(){
+  $('body').on('click','#colorbutton, #coloragain', function(){
 
     var newcolor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -58,7 +58,7 @@ $(document).ready(function(){
   /*--------Counting game-----------*/
   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  $('body').on('click','#button, #countagain', function(){
+  $('body').on('click','#countingbutton, #countagain', function(){
 
     var newnumber = numbers[Math.floor(Math.random() * numbers.length)];
 
@@ -85,8 +85,11 @@ $(document).ready(function(){
   /*--------Whack-a-mole game-----------*/
 
   var moleholes = ["#1", "#2", "#3", "#4", "#5", "#6"];
+  var score;
 
-  $('body').on('click','#button, #whackamoleagain', function(){
+  $('body').on('click','#whackamolebutton, #whackamoleagain', function(){
+
+    score = 0;
 
     $('#content>h2').html("<h2>Whack a mole!</h2>");
     $('#button').replaceWith("<h2>Here we go!</h2>");
@@ -100,7 +103,7 @@ $(document).ready(function(){
       } else{
         clearInterval(gameTime);
         $(".molecontainer>div.peep").removeClass("peep");
-        document.getElementById("whackamoleinstructions").innerHTML ="<h2>Score: XX<span style='padding-left: 3em'></span>Play again?"
+        document.getElementById("whackamoleinstructions").innerHTML ="<h2>Score: " + score + "<span style='padding-left: 3em'></span>Play again?"
         + "<span style='padding-left:1em'></span><button type='button' id='whackamoleagain' class='btn'>Yes</button>"
         + "<button type='button' id='whackamoleagainno' class='btn'>No</button>"
         + "</h2>";
@@ -124,5 +127,8 @@ $(document).ready(function(){
     };
   });
 
-
+  $('body').on('click','.peep', function(){
+    score += 1;
+    console.log(score);
+  });
 });
