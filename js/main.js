@@ -131,4 +131,7 @@ $(document).ready(function(){
     score += 1;
     console.log(score);
   });
+
+  /*--------Matching game-----------*/
+
 });
