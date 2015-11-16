@@ -247,3 +247,9 @@ h3{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.whack{
+  background: url('../img/whack.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
