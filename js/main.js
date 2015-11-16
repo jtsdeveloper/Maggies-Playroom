@@ -125,13 +125,21 @@ $(document).ready(function(){
         clearInterval(molePop);
       };
     };
-  });
 
-  $('body').on('click','.peep', function(){
-    score += 1;
-    console.log(score);
-  });
+    $('body').on('click','.peep', function(){
+      $('.peep')
+        .mousedown(function(){
+          $(this).addClass('whack');
+        })
+        .mouseup(function(){
+          $(this).removeClass('whack');
+        });
 
+      score += 1;
+      console.log(score);
+    });
+
+  });
   /*--------Matching game-----------*/
 
 });
