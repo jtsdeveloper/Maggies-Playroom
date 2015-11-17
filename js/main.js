@@ -138,8 +138,64 @@ $(document).ready(function(){
       score += 1;
       console.log(score);
     });
-
   });
   /*--------Matching game-----------*/
+  var newdeck = "test";
+  var cardindex, facecard;
+  var cardspots = ["#1",
+                   "#2",
+                   "#3",
+                   "#4",
+                   "#5",
+                   "#6",
+                   "#7",
+                   "#8"];
+
+  var deck = ["smile",
+              "smile",
+              "flower",
+              "flower",
+              "pizza",
+              "pizza",
+              "cat",
+              "cat"];
+
+  $('body').on('click','#matchingbutton, #matchingagain', function(){
+
+
+    $('#matchinginstructions>h2').replaceWith("<h2>Find the matching cards!</h2>");
+    $('#matchinginstructions>#matchingbutton').fadeOut(500).remove();
+
+    (function shuffleDeck() {
+      for (var i = deck.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = deck[i];
+        deck[i] = deck[j];
+        deck[j] = temp;
+      };
+
+      newdeck = deck;
+    }());
+
+    for (k = 0; k < newdeck.length; k++){
+
+      cardindex = cardspots[k];
+      facecard = newdeck[k];
+
+      $(cardindex).addClass(facecard);
+
+      console.log(cardindex,facecard);
+    };
+
+    
+
+    $('body').on('click', '.cardbox', function() {
+      $(this).toggleClass('cardback');
+      console.log(this);
+    });
+
+  });
+
+
 
 });
