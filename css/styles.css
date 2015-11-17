@@ -253,3 +253,63 @@ h3{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/*---------Matching Game----------*/
+
+.cardbox{
+  width: 105px;
+  height: 150px;
+  float: left;
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 25px;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 2px;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+}
+
+.cardbox:nth-child(1),
+.cardbox:nth-child(5){
+  margin-left: 70px;
+}
+
+.cardbox:nth-child(4),
+.cardbox:nth-child(8){
+  margin-right: 70px;
+}
+
+.cardbox:hover{
+  box-shadow: none;
+}
+
+
+.smile{
+  background: url('../img/smile.png');
+  position: center;
+  background-repeat: none;
+}
+
+.flower{
+  background: url('../img/smile.png');
+  position: center;
+  background-repeat: none;
+}
+
+.pizza{
+  background: url('../img/smile.png');
+  position: center;
+  background-repeat: none;
+}
+
+.cat{
+  background: url('../img/smile.png');
+  position: center;
+  background-repeat: none;
+}
+
+.cardback{
+  background: url('../img/cardpattern.png');
+  position: center;
+  background-repeat: none;
+}
