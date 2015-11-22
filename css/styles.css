@@ -286,30 +286,36 @@ h3{
 
 .smile{
   background: url('../img/smile.png');
-  position: center;
-  background-repeat: none;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .flower{
-  background: url('../img/smile.png');
-  position: center;
-  background-repeat: none;
+  background: url('../img/flower.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pizza{
-  background: url('../img/smile.png');
-  position: center;
-  background-repeat: none;
+  background: url('../img/pizza.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cat{
-  background: url('../img/smile.png');
-  position: center;
-  background-repeat: none;
+  background: url('../img/kitten.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cardback{
   background: url('../img/cardpattern.png');
-  position: center;
-  background-repeat: none;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.match{
+  background-color: red;
+  background-position: center;
+  background-repeat: no-repeat;
 }
