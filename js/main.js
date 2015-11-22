@@ -162,9 +162,10 @@ $(document).ready(function(){
 
   $('body').on('click','#matchingbutton, #matchingagain', function(){
 
-
     $('#matchinginstructions>h2').replaceWith("<h2>Find the matching cards!</h2>");
     $('#matchinginstructions>#matchingbutton').fadeOut(500).remove();
+
+    //Prep Cards (shuffle and lay out)
 
     (function shuffleDeck() {
       for (var i = deck.length - 1; i > 0; i--) {
@@ -187,15 +188,41 @@ $(document).ready(function(){
       console.log(cardindex,facecard);
     };
 
-    
+    //Begin Gameplay
+
+    var count = 0;
+    var thiscard = "";
+    var guess1 = "";
+    var guess2 = "";
 
     $('body').on('click', '.cardbox', function() {
-      $(this).toggleClass('cardback');
-      console.log(this);
+
+      thiscard = this;                                    //store current card
+      count += 1;                                         //2 counts per turn
+
+      if (count==1){
+        $(this).toggleClass('cardback');                  //turn over card
+        guess1 = thiscard;                                //stores card class for potential match
+
+      } else {
+          console.log(guess1, guess2);
+
+          $(this).toggleClass('cardback');                //turn over card (if first card alreayd turned)
+          guess2 = thiscard;
+
+          if (guess1.className == guess2.className) {     //checks for match
+            $(guess1).addClass("match");                  //adds "match" class
+            $(guess2).addClass("match");
+
+          } else {
+            setTimeout(function() {                       //turns cards back over and begins new turn
+              $(guess1).addClass("cardback");
+              $(guess2).addClass("cardback");
+            }, 1500);
+          };
+
+          count = 0;                                      //resets count to "0" after 2 misses
+      };
     });
-
   });
-
-
-
 });
