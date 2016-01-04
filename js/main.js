@@ -47,26 +47,26 @@ $(document).ready(function(){
   });
 
   /*--------Counting game-----------*/
-  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   $('body').on('click','#countingbutton, #countagain', function(){
 
-    var newnumber = numbers[Math.floor(Math.random() * numbers.length)];
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var CORRECTNUMBER = [1,2,3,4,5,6,7,8,9,10];
+
+    (function shuffleNumbers() {
+      for (var i = numbers.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
+      };
+
+      console.log(numbers);
+    }());
 
     $('#content>h2').fadeOut(200).remove();
-    $('#countinginstructions').html("<h2>What number is " + "<span style='font-family: serif;color: #b4ff69'>" +
-      newnumber + "</span>" + " ?</h2>");
-    console.log(newnumber);
+    $('#countinginstructions').html("<h2>Put the numbers in order!</h2>");
 
-    $('body').on('click', '.countingbox', function (){
-      console.log(newnumber);
-      if(this.id == newcolor){
-        $('#colorinstructions').html("<h2>Great job! Would you like to play again?").append("<button type='button' id='countagain' class='btn'>Yes</button>")
-        .append("<button type='button' id='countagainno' class='btn'>No</button>");
-      } else{
-        $('#countinginstructions').html("<h2>Nope...keep trying! What color is " + newnumber + "?</h2>")
-      };
-    });
+
   });
 
   $('body').on('click', '#countagainno', function(){
@@ -224,9 +224,9 @@ $(document).ready(function(){
               .append("<button type='button' id='matchingagain' class='btn'>Yes</button>")
               .append("<button type='button' id='matchingagainno' class='btn'>No</button>");
 
-              $('body').on('click', '#matchingagain', function(){
-                $('.cardbox').removeClass("match");
-              });
+            //  $('body').on('click', '#matchingagain', function(){
+            //    $('.cardbox').removeClass("match");
+            //  });
 
             } else{
               $('#matchinginstructions').html("<h2>Keep going...you can do it!");
