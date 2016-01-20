@@ -149,9 +149,9 @@ h3{
 /*---------Counting Game----------*/
 
 .countingbox{
-  width: 75px;
-  height: 75px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
+  background-color: pink;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -163,6 +163,16 @@ h3{
   border-radius: 10px;
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
+}
+
+.countingbox:nth-child(1),
+.countingbox:nth-child(6){
+  margin-left: 75px;
+}
+
+.countingbox:nth-child(5),
+.countingbox:nth-child(10){
+  margin-right: 75px;
 }
 
 /*---------Color Game----------*/
@@ -337,4 +347,83 @@ h3{
   background-color: red;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.one {
+  background: url('../img/one.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.two {
+  background: url('../img/two.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.three {
+  background: url('../img/three.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.four {
+  background: url('../img/four.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.five {
+  background: url('../img/five.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.six {
+  background: url('../img/six.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.seven {
+  background: url('../img/seven.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.eight {
+  background: url('../img/eight.jpg');
+  background-position: ;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.nine {
+  background: url('../img/nine.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.ten {
+  background: url('../img/ten.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
