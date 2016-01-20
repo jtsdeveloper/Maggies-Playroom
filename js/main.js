@@ -96,8 +96,6 @@ $(document).ready(function(){
 
     thisnumber = this;
 
-    if c
-
   });
 
 
