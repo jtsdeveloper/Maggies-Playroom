@@ -49,7 +49,17 @@ $(document).ready(function(){
   /*--------Counting game-----------*/
   $('body').on('click','#countingbutton, #countagain', function(){
 
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+    var numberspots = ["#1",
+                     "#2",
+                     "#3",
+                     "#4",
+                     "#5",
+                     "#6",
+                     "#7",
+                     "#8",
+                     "#9",
+                     "#10"];
     var CORRECTNUMBER = [1,2,3,4,5,6,7,8,9,10];
 
     (function shuffleNumbers() {
@@ -63,11 +73,33 @@ $(document).ready(function(){
       console.log(numbers);
     }());
 
+    for (k = 0; k < numbers.length; k++){
+
+      numberindex = numberspots[k];
+      numberpic = numbers[k];
+
+      $(numberindex).addClass(numberpic);
+
+      console.log(numberindex, numberpic);
+    };
+
     $('#content>h2').fadeOut(200).remove();
     $('#countinginstructions').html("<h2>Put the numbers in order!</h2>");
 
+  });
+
+  var thisnumber = null;
+
+  $('body').on('click', '.countingbox', function() {
+
+    var count = 0;
+
+    thisnumber = this;
+
+    if c
 
   });
+
 
   $('body').on('click', '#countagainno', function(){
     $('#countingrinstructions').html("<h2>OK...click on a new game above to have more fun!</h2>");
